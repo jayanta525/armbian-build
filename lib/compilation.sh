@@ -182,7 +182,7 @@ compile_uboot()
 			${OUTPUT_VERYSILENT:+' >/dev/null 2>/dev/null'}
 
 		# armbian specifics u-boot settings
-		[[ -f .config ]] && sed -i 's/CONFIG_LOCALVERSION=""/CONFIG_LOCALVERSION="-armbian"/g' .config
+		[[ -f .config ]] && sed -i 's/CONFIG_LOCALVERSION=""/CONFIG_LOCALVERSION=" OpenWrt"/g' .config
 		[[ -f .config ]] && sed -i 's/CONFIG_LOCALVERSION_AUTO=.*/# CONFIG_LOCALVERSION_AUTO is not set/g' .config
 
 		# for modern kernel and non spi targets
